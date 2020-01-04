@@ -10,9 +10,11 @@
 
 @implementation AssetViewModel
 
--(instancetype)initWithTitle: (NSString *)title {
+- (instancetype)initWithTitle: (NSString *)title
+{
     self = [super init];
-    if (self) {
+    if (self)
+    {
         _title = title;
     }
     return self;

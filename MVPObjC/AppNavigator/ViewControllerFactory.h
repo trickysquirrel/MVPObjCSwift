@@ -8,12 +8,13 @@
 
 @import UIKit;
 @import Foundation;
+@class AssetCollectionViewController;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ViewControllerFactory : NSObject
 
-- (UIViewController *)makeHomeViewController;
+- (AssetCollectionViewController *)makeHomeViewController;
 
 @end
 

@@ -17,7 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)reloadWithSections: (NSMutableArray *)sections
                identifiers: (NSString *(^)(void))identifiers
-              configurator: (void (^)(UICollectionViewCell *, NSObject *))configurator;
+              configurator: (void (^)(UICollectionViewCell *, NSObject *))configurator
+                  selector: (void (^)(NSObject *))selector;
 
 @end
 

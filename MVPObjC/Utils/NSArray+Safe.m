@@ -11,8 +11,10 @@
 
 @implementation NSArray (Safe)
 
--(nullable NSObject *)elementAtIndex: (NSInteger)index {
-    if (index < self.count) {
+-(nullable NSObject *)elementAtIndex: (NSInteger)index
+{
+    if (index < self.count)
+    {
         return self[index];
     }
     return nil;

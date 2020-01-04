@@ -9,15 +9,13 @@
 @import UIKit;
 #import "AppNavigator.h"
 #import "ViewControllerFactory.h"
+#import "AssetCollectionViewController.h"
 
 @interface AppNavigator ()
 @property (nonatomic, strong, readonly) UIWindow *window;
 @property (nonatomic, strong, readonly) UINavigationController *navigationController;
 @property (nonatomic, readonly) BOOL animateTransitions;
 @property (nonatomic, strong, readonly) ViewControllerFactory *viewControllerFactory;
-
-//@property (nonatomic, strong, readonly) InformationAlertProtocol *informationAlert;
-
 @end
 
 
@@ -37,13 +35,26 @@
     return self;
 }
 
-- (void)start {
-    UIViewController *viewController = [self.viewControllerFactory makeHomeViewController];
+- (void)start
+{
+    AssetCollectionViewController *viewController = [self.viewControllerFactory makeHomeViewController];
+    viewController.delegate = self;
     [self navigationController: self.navigationController pushOnViewController: viewController];
 }
 
-- (void)navigationController: (UINavigationController *)navigationController pushOnViewController:(UIViewController*)pushOnViewController {
+- (void)navigationController: (UINavigationController *)navigationController
+        pushOnViewController: (UIViewController*)pushOnViewController
+{
     [navigationController pushViewController: pushOnViewController animated: self.animateTransitions];
+}
+
+- (void)showDetails:(NSString *)assetId
+              title:(NSString *)title
+{
+    // push on same VC, just an example for now using to test retrain cycles
+    AssetCollectionViewController *viewController = [self.viewControllerFactory makeHomeViewController];
+    viewController.delegate = self;
+    [self navigationController: self.navigationController pushOnViewController: viewController];
 }
 
 @end

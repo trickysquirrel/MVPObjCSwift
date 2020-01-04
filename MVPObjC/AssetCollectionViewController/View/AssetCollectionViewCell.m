@@ -18,14 +18,16 @@
 
 static NSString *_identifier = nil;
 
-+ (NSString *)identifier {
++ (NSString *)identifier
+{
   if (_identifier == nil) {
       _identifier = @"AssetCollectionViewCell";
   }
   return _identifier;
 }
 
-- (void)configureViewWithViewModel: (AssetViewModel *)viewModel {
+- (void)configureViewWithViewModel: (AssetViewModel *)viewModel
+{
     self.label.text = viewModel.title;
 }
 @end

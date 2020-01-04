@@ -11,7 +11,8 @@
 
 @implementation CollectionSection
 
--(instancetype)initWithRows: (NSMutableArray *)rows {
+-(instancetype)initWithRows: (NSArray *)rows
+{
     self = [super init];
     if (self) {
         _rows = [NSMutableArray new];

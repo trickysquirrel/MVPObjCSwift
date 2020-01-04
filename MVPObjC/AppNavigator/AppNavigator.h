@@ -8,10 +8,11 @@
 
 @import Foundation;
 #import "UTLMacros.h"
+#import "AppNavigatorDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AppNavigator : NSObject
+@interface AppNavigator : NSObject <AppNavigatorDelegate>
 
 // this ensures that only the initialiser defined here is allowed to be used
 UTL_REMOVE_DEFAULT_NSOBJECT_INITIALIZERS;

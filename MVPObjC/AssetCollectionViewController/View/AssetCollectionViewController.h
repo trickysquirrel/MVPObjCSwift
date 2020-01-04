@@ -8,10 +8,13 @@
 
 @import UIKit;
 #import "UTLMacros.h"
+#import "AppNavigatorDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AssetCollectionViewController : UICollectionViewController
+
+@property (nonatomic, weak) id <AppNavigatorDelegate> delegate;
 
 UTL_REMOVE_DEFAULT_UIVIEWCONTROLLER_INITIALIZERS;
 

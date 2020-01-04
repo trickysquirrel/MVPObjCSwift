@@ -11,8 +11,9 @@
 
 @implementation ViewControllerFactory
 
-- (UIViewController *)makeHomeViewController; {
-    UIViewController *viewController = [[AssetCollectionViewController alloc] initWithTitle: @"Movies"];
+- (AssetCollectionViewController *)makeHomeViewController
+{
+    AssetCollectionViewController *viewController = [[AssetCollectionViewController alloc] initWithTitle: @"Movies"];
     return viewController;
 }
 

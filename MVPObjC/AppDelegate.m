@@ -22,20 +22,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
     self.appNavigator = [[AppNavigator alloc] initWithWindow: self.window animateTransitions: YES];
-
     [self.appNavigator start];
-
-    [self test];
-    
     return YES;
 }
-
-- (void)test {
-    NSArray<NSString *> *rows = [[NSArray alloc] initWithObjects:@"1",@"2",@"3", nil];
-    NSLog(@">>> %@", [rows elementAtIndex:10] );
-}
-
 
 @end

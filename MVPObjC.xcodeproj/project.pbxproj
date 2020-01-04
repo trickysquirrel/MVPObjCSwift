@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		301270D723C0360100592565 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 301270D623C0360100592565 /* AppDelegate.m */; };
-		301270DD23C0360100592565 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 301270DC23C0360100592565 /* ViewController.m */; };
 		301270E023C0360100592565 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301270DE23C0360100592565 /* Main.storyboard */; };
 		301270E223C0360300592565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301270E123C0360300592565 /* Assets.xcassets */; };
 		301270E523C0360300592565 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301270E323C0360300592565 /* LaunchScreen.storyboard */; };
@@ -23,6 +22,7 @@
 		3012711F23C049F800592565 /* CollectionSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012711E23C049F800592565 /* CollectionSection.m */; };
 		3012712223C04DE200592565 /* AssetViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012712123C04DE200592565 /* AssetViewModel.m */; };
 		3012712523C0908700592565 /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012712423C0908700592565 /* NSArray+Safe.m */; };
+		3012712A23C0937200592565 /* AssetCollectionPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012712923C0937200592565 /* AssetCollectionPresenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,6 @@
 		301270D223C0360100592565 /* MVPObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVPObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		301270D523C0360100592565 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		301270D623C0360100592565 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		301270DB23C0360100592565 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		301270DC23C0360100592565 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		301270DF23C0360100592565 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		301270E123C0360300592565 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		301270E423C0360300592565 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +65,9 @@
 		3012712123C04DE200592565 /* AssetViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetViewModel.m; sourceTree = "<group>"; };
 		3012712323C0908700592565 /* NSArray+Safe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Safe.h"; sourceTree = "<group>"; };
 		3012712423C0908700592565 /* NSArray+Safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
+		3012712823C0937200592565 /* AssetCollectionPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetCollectionPresenter.h; sourceTree = "<group>"; };
+		3012712923C0937200592565 /* AssetCollectionPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetCollectionPresenter.m; sourceTree = "<group>"; };
+		3012712B23C093D300592565 /* AppNavigatorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppNavigatorDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +114,6 @@
 				3012711123C0401D00592565 /* AssetCollectionViewController */,
 				301270D523C0360100592565 /* AppDelegate.h */,
 				301270D623C0360100592565 /* AppDelegate.m */,
-				301270DB23C0360100592565 /* ViewController.h */,
-				301270DC23C0360100592565 /* ViewController.m */,
 				301270DE23C0360100592565 /* Main.storyboard */,
 				301270E123C0360300592565 /* Assets.xcassets */,
 				301270E323C0360300592565 /* LaunchScreen.storyboard */,
@@ -136,6 +135,7 @@
 		301270FC23C0364C00592565 /* AppNavigator */ = {
 			isa = PBXGroup;
 			children = (
+				3012712B23C093D300592565 /* AppNavigatorDelegate.h */,
 				3012710923C0373700592565 /* AppNavigator.h */,
 				3012710A23C0373700592565 /* AppNavigator.m */,
 				3012710E23C03F2F00592565 /* ViewControllerFactory.h */,
@@ -161,15 +161,33 @@
 		3012711123C0401D00592565 /* AssetCollectionViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3012712623C0934800592565 /* View */,
+				3012712723C0935400592565 /* Presenter */,
+			);
+			path = AssetCollectionViewController;
+			sourceTree = "<group>";
+		};
+		3012712623C0934800592565 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				3012711223C0403700592565 /* AssetCollectionViewController.h */,
 				3012711323C0403700592565 /* AssetCollectionViewController.m */,
 				3012711523C043B700592565 /* AssetCollectionViewCell.h */,
 				3012711623C043B700592565 /* AssetCollectionViewCell.m */,
 				3012711723C043B700592565 /* AssetCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3012712723C0935400592565 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3012712823C0937200592565 /* AssetCollectionPresenter.h */,
+				3012712923C0937200592565 /* AssetCollectionPresenter.m */,
 				3012712023C04DE200592565 /* AssetViewModel.h */,
 				3012712123C04DE200592565 /* AssetViewModel.m */,
 			);
-			path = AssetCollectionViewController;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,11 +293,11 @@
 			files = (
 				3012711023C03F2F00592565 /* ViewControllerFactory.m in Sources */,
 				3012712223C04DE200592565 /* AssetViewModel.m in Sources */,
-				301270DD23C0360100592565 /* ViewController.m in Sources */,
 				3012711823C043B700592565 /* AssetCollectionViewCell.m in Sources */,
 				3012710B23C0373700592565 /* AppNavigator.m in Sources */,
 				3012711F23C049F800592565 /* CollectionSection.m in Sources */,
 				301270D723C0360100592565 /* AppDelegate.m in Sources */,
+				3012712A23C0937200592565 /* AssetCollectionPresenter.m in Sources */,
 				3012712523C0908700592565 /* NSArray+Safe.m in Sources */,
 				301270E823C0360300592565 /* main.m in Sources */,
 				3012711423C0403700592565 /* AssetCollectionViewController.m in Sources */,
