@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		301270D723C0360100592565 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 301270D623C0360100592565 /* AppDelegate.m */; };
-		301270DA23C0360100592565 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 301270D923C0360100592565 /* SceneDelegate.m */; };
 		301270DD23C0360100592565 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 301270DC23C0360100592565 /* ViewController.m */; };
 		301270E023C0360100592565 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301270DE23C0360100592565 /* Main.storyboard */; };
 		301270E223C0360300592565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301270E123C0360300592565 /* Assets.xcassets */; };
 		301270E523C0360300592565 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301270E323C0360300592565 /* LaunchScreen.storyboard */; };
 		301270E823C0360300592565 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 301270E723C0360300592565 /* main.m */; };
 		301270F223C0360400592565 /* MVPObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 301270F123C0360400592565 /* MVPObjCTests.m */; };
+		3012710B23C0373700592565 /* AppNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012710A23C0373700592565 /* AppNavigator.m */; };
+		3012711023C03F2F00592565 /* ViewControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012710F23C03F2F00592565 /* ViewControllerFactory.m */; };
+		3012711423C0403700592565 /* AssetCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012711323C0403700592565 /* AssetCollectionViewController.m */; };
+		3012711823C043B700592565 /* AssetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012711623C043B700592565 /* AssetCollectionViewCell.m */; };
+		3012711923C043B700592565 /* AssetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3012711723C043B700592565 /* AssetCollectionViewCell.xib */; };
+		3012711C23C0483900592565 /* CollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012711B23C0483900592565 /* CollectionViewDataSource.m */; };
+		3012711F23C049F800592565 /* CollectionSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012711E23C049F800592565 /* CollectionSection.m */; };
+		3012712223C04DE200592565 /* AssetViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012712123C04DE200592565 /* AssetViewModel.m */; };
+		3012712523C0908700592565 /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012712423C0908700592565 /* NSArray+Safe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +39,6 @@
 		301270D223C0360100592565 /* MVPObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVPObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		301270D523C0360100592565 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		301270D623C0360100592565 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		301270D823C0360100592565 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		301270D923C0360100592565 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		301270DB23C0360100592565 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		301270DC23C0360100592565 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		301270DF23C0360100592565 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +49,24 @@
 		301270ED23C0360300592565 /* MVPObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPObjCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		301270F123C0360400592565 /* MVPObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPObjCTests.m; sourceTree = "<group>"; };
 		301270F323C0360400592565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3012710923C0373700592565 /* AppNavigator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppNavigator.h; sourceTree = "<group>"; };
+		3012710A23C0373700592565 /* AppNavigator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppNavigator.m; sourceTree = "<group>"; };
+		3012710D23C039C500592565 /* UTLMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UTLMacros.h; sourceTree = "<group>"; };
+		3012710E23C03F2F00592565 /* ViewControllerFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerFactory.h; sourceTree = "<group>"; };
+		3012710F23C03F2F00592565 /* ViewControllerFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerFactory.m; sourceTree = "<group>"; };
+		3012711223C0403700592565 /* AssetCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetCollectionViewController.h; sourceTree = "<group>"; };
+		3012711323C0403700592565 /* AssetCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetCollectionViewController.m; sourceTree = "<group>"; };
+		3012711523C043B700592565 /* AssetCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetCollectionViewCell.h; sourceTree = "<group>"; };
+		3012711623C043B700592565 /* AssetCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetCollectionViewCell.m; sourceTree = "<group>"; };
+		3012711723C043B700592565 /* AssetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssetCollectionViewCell.xib; sourceTree = "<group>"; };
+		3012711A23C0483900592565 /* CollectionViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewDataSource.h; sourceTree = "<group>"; };
+		3012711B23C0483900592565 /* CollectionViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewDataSource.m; sourceTree = "<group>"; };
+		3012711D23C049F800592565 /* CollectionSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionSection.h; sourceTree = "<group>"; };
+		3012711E23C049F800592565 /* CollectionSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionSection.m; sourceTree = "<group>"; };
+		3012712023C04DE200592565 /* AssetViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetViewModel.h; sourceTree = "<group>"; };
+		3012712123C04DE200592565 /* AssetViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetViewModel.m; sourceTree = "<group>"; };
+		3012712323C0908700592565 /* NSArray+Safe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Safe.h"; sourceTree = "<group>"; };
+		3012712423C0908700592565 /* NSArray+Safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +108,11 @@
 		301270D423C0360100592565 /* MVPObjC */ = {
 			isa = PBXGroup;
 			children = (
+				3012710C23C039AA00592565 /* Utils */,
+				301270FC23C0364C00592565 /* AppNavigator */,
+				3012711123C0401D00592565 /* AssetCollectionViewController */,
 				301270D523C0360100592565 /* AppDelegate.h */,
 				301270D623C0360100592565 /* AppDelegate.m */,
-				301270D823C0360100592565 /* SceneDelegate.h */,
-				301270D923C0360100592565 /* SceneDelegate.m */,
 				301270DB23C0360100592565 /* ViewController.h */,
 				301270DC23C0360100592565 /* ViewController.m */,
 				301270DE23C0360100592565 /* Main.storyboard */,
@@ -106,6 +131,45 @@
 				301270F323C0360400592565 /* Info.plist */,
 			);
 			path = MVPObjCTests;
+			sourceTree = "<group>";
+		};
+		301270FC23C0364C00592565 /* AppNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				3012710923C0373700592565 /* AppNavigator.h */,
+				3012710A23C0373700592565 /* AppNavigator.m */,
+				3012710E23C03F2F00592565 /* ViewControllerFactory.h */,
+				3012710F23C03F2F00592565 /* ViewControllerFactory.m */,
+			);
+			path = AppNavigator;
+			sourceTree = "<group>";
+		};
+		3012710C23C039AA00592565 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3012710D23C039C500592565 /* UTLMacros.h */,
+				3012711A23C0483900592565 /* CollectionViewDataSource.h */,
+				3012711B23C0483900592565 /* CollectionViewDataSource.m */,
+				3012711D23C049F800592565 /* CollectionSection.h */,
+				3012711E23C049F800592565 /* CollectionSection.m */,
+				3012712323C0908700592565 /* NSArray+Safe.h */,
+				3012712423C0908700592565 /* NSArray+Safe.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3012711123C0401D00592565 /* AssetCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3012711223C0403700592565 /* AssetCollectionViewController.h */,
+				3012711323C0403700592565 /* AssetCollectionViewController.m */,
+				3012711523C043B700592565 /* AssetCollectionViewCell.h */,
+				3012711623C043B700592565 /* AssetCollectionViewCell.m */,
+				3012711723C043B700592565 /* AssetCollectionViewCell.xib */,
+				3012712023C04DE200592565 /* AssetViewModel.h */,
+				3012712123C04DE200592565 /* AssetViewModel.m */,
+			);
+			path = AssetCollectionViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +255,7 @@
 				301270E523C0360300592565 /* LaunchScreen.storyboard in Resources */,
 				301270E223C0360300592565 /* Assets.xcassets in Resources */,
 				301270E023C0360100592565 /* Main.storyboard in Resources */,
+				3012711923C043B700592565 /* AssetCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,10 +273,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3012711023C03F2F00592565 /* ViewControllerFactory.m in Sources */,
+				3012712223C04DE200592565 /* AssetViewModel.m in Sources */,
 				301270DD23C0360100592565 /* ViewController.m in Sources */,
+				3012711823C043B700592565 /* AssetCollectionViewCell.m in Sources */,
+				3012710B23C0373700592565 /* AppNavigator.m in Sources */,
+				3012711F23C049F800592565 /* CollectionSection.m in Sources */,
 				301270D723C0360100592565 /* AppDelegate.m in Sources */,
+				3012712523C0908700592565 /* NSArray+Safe.m in Sources */,
 				301270E823C0360300592565 /* main.m in Sources */,
-				301270DA23C0360100592565 /* SceneDelegate.m in Sources */,
+				3012711423C0403700592565 /* AssetCollectionViewController.m in Sources */,
+				3012711C23C0483900592565 /* CollectionViewDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
