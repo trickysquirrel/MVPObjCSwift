@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSString *title;
 
 UTL_REMOVE_DEFAULT_NSOBJECT_INITIALIZERS
--(instancetype)initWithTitle: (NSString *)title;
+-(nonnull instancetype)initWithTitle: (NSString *)title;
 
 @end
 

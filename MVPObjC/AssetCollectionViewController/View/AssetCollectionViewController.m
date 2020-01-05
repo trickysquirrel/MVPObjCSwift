@@ -28,7 +28,7 @@
     NSLog(@">>> dealloc retain cycles clear");
 }
 
--(instancetype)initWithTitle: (NSString *)title
+-(nonnull instancetype)initWithTitle: (NSString *)title
 {
     self = [super initWithCollectionViewLayout:[UICollectionViewFlowLayout new]];
     if (self)

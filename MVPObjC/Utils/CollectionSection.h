@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CollectionSection : NSObject
 @property (nonatomic, strong, readonly) NSMutableArray *rows;
 
--(instancetype)initWithRows: (NSArray *)rows;
+-(nonnull instancetype)initWithRows: (NSArray *)rows;
 
 @end
 

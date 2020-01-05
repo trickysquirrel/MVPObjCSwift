@@ -23,6 +23,11 @@
 		3012712223C04DE200592565 /* AssetViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012712123C04DE200592565 /* AssetViewModel.m */; };
 		3012712523C0908700592565 /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012712423C0908700592565 /* NSArray+Safe.m */; };
 		3012712A23C0937200592565 /* AssetCollectionPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3012712923C0937200592565 /* AssetCollectionPresenter.m */; };
+		306CEB8123C15392006EBBB0 /* AssetCollectionInterator.m in Sources */ = {isa = PBXBuildFile; fileRef = 306CEB8023C15392006EBBB0 /* AssetCollectionInterator.m */; };
+		306CEB8D23C159F2006EBBB0 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 306CEB8C23C159F2006EBBB0 /* movies.json */; };
+		306CEB9123C19AF2006EBBB0 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306CEB9023C19AF2006EBBB0 /* DataLoader.swift */; };
+		306CEB9723C19C59006EBBB0 /* MovieDataLoaderBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306CEB9623C19C59006EBBB0 /* MovieDataLoaderBridge.swift */; };
+		306CEB9A23C1A68D006EBBB0 /* NSArray+Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 306CEB9923C1A68D006EBBB0 /* NSArray+Map.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +73,14 @@
 		3012712823C0937200592565 /* AssetCollectionPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetCollectionPresenter.h; sourceTree = "<group>"; };
 		3012712923C0937200592565 /* AssetCollectionPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetCollectionPresenter.m; sourceTree = "<group>"; };
 		3012712B23C093D300592565 /* AppNavigatorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppNavigatorDelegate.h; sourceTree = "<group>"; };
+		306CEB7F23C15392006EBBB0 /* AssetCollectionInterator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetCollectionInterator.h; sourceTree = "<group>"; };
+		306CEB8023C15392006EBBB0 /* AssetCollectionInterator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetCollectionInterator.m; sourceTree = "<group>"; };
+		306CEB8C23C159F2006EBBB0 /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
+		306CEB9023C19AF2006EBBB0 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		306CEB9623C19C59006EBBB0 /* MovieDataLoaderBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataLoaderBridge.swift; sourceTree = "<group>"; };
+		306CEB9823C1A68D006EBBB0 /* NSArray+Map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Map.h"; sourceTree = "<group>"; };
+		306CEB9923C1A68D006EBBB0 /* NSArray+Map.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Map.m"; sourceTree = "<group>"; };
+		306CEB9B23C1A6E5006EBBB0 /* MVPObjC-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MVPObjC-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +160,7 @@
 		3012710C23C039AA00592565 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				306CEB8E23C19AD7006EBBB0 /* DataLoader */,
 				3012710D23C039C500592565 /* UTLMacros.h */,
 				3012711A23C0483900592565 /* CollectionViewDataSource.h */,
 				3012711B23C0483900592565 /* CollectionViewDataSource.m */,
@@ -154,6 +168,8 @@
 				3012711E23C049F800592565 /* CollectionSection.m */,
 				3012712323C0908700592565 /* NSArray+Safe.h */,
 				3012712423C0908700592565 /* NSArray+Safe.m */,
+				306CEB9823C1A68D006EBBB0 /* NSArray+Map.h */,
+				306CEB9923C1A68D006EBBB0 /* NSArray+Map.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -163,6 +179,7 @@
 			children = (
 				3012712623C0934800592565 /* View */,
 				3012712723C0935400592565 /* Presenter */,
+				306CEB7E23C15356006EBBB0 /* Interactor */,
 			);
 			path = AssetCollectionViewController;
 			sourceTree = "<group>";
@@ -188,6 +205,26 @@
 				3012712123C04DE200592565 /* AssetViewModel.m */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		306CEB7E23C15356006EBBB0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				306CEB7F23C15392006EBBB0 /* AssetCollectionInterator.h */,
+				306CEB8023C15392006EBBB0 /* AssetCollectionInterator.m */,
+				306CEB8C23C159F2006EBBB0 /* movies.json */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		306CEB8E23C19AD7006EBBB0 /* DataLoader */ = {
+			isa = PBXGroup;
+			children = (
+				306CEB9B23C1A6E5006EBBB0 /* MVPObjC-Bridging-Header.h */,
+				306CEB9023C19AF2006EBBB0 /* DataLoader.swift */,
+				306CEB9623C19C59006EBBB0 /* MovieDataLoaderBridge.swift */,
+			);
+			path = DataLoader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +276,7 @@
 				TargetAttributes = {
 					301270D123C0360100592565 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 					301270EC23C0360300592565 = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -272,6 +310,7 @@
 			files = (
 				301270E523C0360300592565 /* LaunchScreen.storyboard in Resources */,
 				301270E223C0360300592565 /* Assets.xcassets in Resources */,
+				306CEB8D23C159F2006EBBB0 /* movies.json in Resources */,
 				301270E023C0360100592565 /* Main.storyboard in Resources */,
 				3012711923C043B700592565 /* AssetCollectionViewCell.xib in Resources */,
 			);
@@ -291,10 +330,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				306CEB9A23C1A68D006EBBB0 /* NSArray+Map.m in Sources */,
 				3012711023C03F2F00592565 /* ViewControllerFactory.m in Sources */,
+				306CEB8123C15392006EBBB0 /* AssetCollectionInterator.m in Sources */,
+				306CEB9123C19AF2006EBBB0 /* DataLoader.swift in Sources */,
 				3012712223C04DE200592565 /* AssetViewModel.m in Sources */,
 				3012711823C043B700592565 /* AssetCollectionViewCell.m in Sources */,
 				3012710B23C0373700592565 /* AppNavigator.m in Sources */,
+				306CEB9723C19C59006EBBB0 /* MovieDataLoaderBridge.swift in Sources */,
 				3012711F23C049F800592565 /* CollectionSection.m in Sources */,
 				301270D723C0360100592565 /* AppDelegate.m in Sources */,
 				3012712A23C0937200592565 /* AssetCollectionPresenter.m in Sources */,
@@ -457,6 +500,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7HG6PP7Q5J;
 				INFOPLIST_FILE = MVPObjC/Info.plist;
@@ -466,6 +510,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.richardmoult.MVPObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MVPObjC/Utils/DataLoader/MVPObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -474,6 +521,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7HG6PP7Q5J;
 				INFOPLIST_FILE = MVPObjC/Info.plist;
@@ -483,6 +531,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.richardmoult.MVPObjC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MVPObjC/Utils/DataLoader/MVPObjC-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -490,6 +540,7 @@
 		301270FA23C0360400592565 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7HG6PP7Q5J;
@@ -510,6 +561,7 @@
 		301270FB23C0360400592565 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7HG6PP7Q5J;

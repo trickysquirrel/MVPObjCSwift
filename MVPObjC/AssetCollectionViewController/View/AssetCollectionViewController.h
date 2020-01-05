@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 UTL_REMOVE_DEFAULT_UIVIEWCONTROLLER_INITIALIZERS;
 
--(instancetype)initWithTitle: (NSString *)title;
+-(nonnull instancetype)initWithTitle: (NSString *)title;
 
 @end
 

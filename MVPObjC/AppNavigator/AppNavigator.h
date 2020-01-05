@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // this ensures that only the initialiser defined here is allowed to be used
 UTL_REMOVE_DEFAULT_NSOBJECT_INITIALIZERS;
-- (instancetype)initWithWindow: (UIWindow *)window animateTransitions:(BOOL) animateTransitions;
+- (nonnull instancetype)initWithWindow: (UIWindow *)window animateTransitions:(BOOL) animateTransitions;
 
 - (void)start;
 

@@ -8,44 +8,55 @@
 
 #import "AssetCollectionPresenter.h"
 #import "AssetViewModel.h"
+#import "AssetCollectionInterator.h"
+#import "MVPObjC-Swift.h"
+#import "NSArray+Map.h"
 
 @interface AssetCollectionPresenter ()
-@property (nonatomic, copy) void (^onLoadingClosure)(BOOL loading);
-@property (nonatomic, copy) void (^onSuccessClosure)(NSArray<AssetViewModel *> *viewModels);
-@property (nonatomic, copy) void (^onErrorClosure)(NSError *error);
+@property (nonatomic, copy) AssetCollectionInterator *interactor;
 @end
 
 @implementation AssetCollectionPresenter
 
-// dispatch_queue_t queue = dispatch_queue_create("com.example.myqueue",  DISPATCH_QUEUE_SERIAL);
+-(instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _interactor = [AssetCollectionInterator new];
+    }
+    return self;
+}
 
 - (void)updateViewOnQueue: (dispatch_queue_t) queue
                 onLoading: (void (^)(BOOL))onLoading
                 onSuccess: (void (^)(NSArray<AssetViewModel *> *))onSuccess
                   onError: (void (^)(NSError *))onError
 {
-    self.onLoadingClosure = onLoading;
-    self.onSuccessClosure = onSuccess;
-    self.onErrorClosure = onError;
+    dispatch_queue_t backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul);
+    
+    [self.interactor fetchDataOnQueue: backgroundQueue
 
-    dispatch_async(queue, ^{
-        self.onLoadingClosure(YES);
-    });
+        onLoading:^(BOOL loading) {
 
-    // test data
-    NSMutableArray<AssetViewModel *> *rows = (NSMutableArray<AssetViewModel *> *)@[
-                                                [[AssetViewModel alloc] initWithTitle: @"1"],
-                                                [[AssetViewModel alloc] initWithTitle: @"2"],
-                                                [[AssetViewModel alloc] initWithTitle: @"3"]
+            dispatch_async(queue, ^{
+                onLoading(loading);
+            });
+
+        } onSuccess:^(AssetDataModel2 * _Nonnull data) {
+
+            NSArray<AssetViewModel *> *rows = [data.data.items mapObjectsUsingBlock:^id _Nonnull(id  _Nonnull obj, NSUInteger idx) {
+                return [[AssetViewModel alloc] initWithTitle: [obj title] ];
+            }];
+
+            dispatch_async(queue, ^{
+                onSuccess(rows);
+            });
+
+
+        } onError:^(NSError * _Nonnull error) {
+            // error
+        }
     ];
-
-    dispatch_async(queue, ^{
-        self.onSuccessClosure(rows);
-    });
-
-    dispatch_async(queue, ^{
-        self.onLoadingClosure(NO);
-    });
 }
 
 @end

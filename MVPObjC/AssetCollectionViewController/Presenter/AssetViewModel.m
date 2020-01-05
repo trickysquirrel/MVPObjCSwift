@@ -10,7 +10,7 @@
 
 @implementation AssetViewModel
 
-- (instancetype)initWithTitle: (NSString *)title
+- (nonnull instancetype)initWithTitle: (NSString *)title
 {
     self = [super init];
     if (self)

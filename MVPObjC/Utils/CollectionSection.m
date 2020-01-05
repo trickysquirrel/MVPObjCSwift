@@ -11,7 +11,7 @@
 
 @implementation CollectionSection
 
--(instancetype)initWithRows: (NSArray *)rows
+- (nonnull instancetype)initWithRows: (NSArray *)rows
 {
     self = [super init];
     if (self) {

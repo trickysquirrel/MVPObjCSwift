@@ -18,10 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
                 onSuccess: (void (^)(NSArray<AssetViewModel *> *))onSuccess
                   onError: (void (^)(NSError *))onError;
 
-- (void)updateViewOnLoading: (void (^)(BOOL))onLoading
-                  onSuccess: (void (^)(NSArray<AssetViewModel *> *))onSuccess
-                    onError: (void (^)(NSError *))onError;
-
 @end
 
 NS_ASSUME_NONNULL_END

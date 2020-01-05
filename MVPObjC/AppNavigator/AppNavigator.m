@@ -21,7 +21,7 @@
 
 @implementation AppNavigator
 
-- (instancetype)initWithWindow: (UIWindow *)window animateTransitions:(BOOL) animateTransitions
+- (nonnull instancetype)initWithWindow: (UIWindow *)window animateTransitions:(BOOL) animateTransitions
 {
     self = [super init];
     if (self) {
